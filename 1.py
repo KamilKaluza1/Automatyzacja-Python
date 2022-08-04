@@ -1,0 +1,7 @@
+print('witaj świecie!')
+print('jak masz na imię?')
+myName = input()
+print(f'miło cie poznać {myName} ')
+print(f'liczba znaków w twoim imieniu wynosi {len(myName)}')
+myAge = input('ile masz lat?')
+print(f'za rok będziesz mieć {str(int(myAge)+1)}')
