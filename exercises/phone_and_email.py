@@ -22,25 +22,24 @@ email_regex = re.compile(r'''(
 
 # Wyszukanie dopasowań w schowsku.
 
-text = str(pyperclip.paste())
-matches = []
+text = str(pyperclip.paste()) # Pobiera zawartosć schowka
+matches = []  #Tworzy pustą liste matches
 
-for groups in phone_regex.findall(text):
-    print(groups)
-    phone_num = '-'.join([groups[1], groups[3], groups[5]])
-    if groups[8] != '':
-        phone_num += ' x' + groups[8]
-    matches.append(phone_num)
+for groups in phone_regex.findall(text): # iteruje przez grupy wyszukane w texcie 
+    phone_num = '-'.join([groups[1], groups[3], groups[5]]) # tworzy nuymer do wyświetelenia
+    if groups[8] != '': #sprawdza czy został podny numer wewnętrzny
+        phone_num += ' x' + groups[8] #jeżeli został dodaje go po x 
+    matches.append(phone_num) # przygotowany do wyświetlenia numer zostanie dodany do listy 
 
-for groups in email_regex.findall(text):
-    matches.append(groups[0])
+for groups in email_regex.findall(text): # iteruje znalezione w tekscie @ 
+    matches.append(groups[0]) #dodaje poprawne wartości do lisy
 
-#TODO: Skopiowanie wyników do schowka.
+# Skopiowanie wyników do schowka.
 
-if len(matches) > 0:
+if len(matches) > 0: #jeżeli lista nie jest pusta wyświetla ją w sformatowany spodosób 
     pyperclip.copy('\n'.join(matches))
     x='\n'.join(matches)
     print(f"Skopiowano do schowka:\n{x}")
-else:
+else: #jeżeli jest pusta informuje o braku wyników 
     print("nie znaleziono numeru telfonu ")
 
