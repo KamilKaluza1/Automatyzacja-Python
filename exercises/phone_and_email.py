@@ -2,7 +2,7 @@
 #phone_and_email.py - Wyszukuje numery telefonów i adresy email w schowku.
 import pyperclip, re
 
-phone_regex = re.compile(r'''(
+phone_regex = re.compile(r'''(#tworzy wrzozec
     (\d{3}|\(\d{3}\))?             #3 cyfry lub 3 cyfry w nawiasie może tego wgl nie być 
     (\s|-|\.)?                     # znak białyn lub myślnik lub kropka może nie wystąpić 
     (\d{3})                        # 3 cyfry
