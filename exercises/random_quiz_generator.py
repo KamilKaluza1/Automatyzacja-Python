@@ -14,8 +14,7 @@ capitals = {'Alabama': 'Montgomery', 'Alaska': 'Juneau', 'Arizona': 'Phoenix',
 'Lansing', 'Minnesota': 'Saint Paul', 'Mississippi': 'Jackson', 'Missouri':
 'Jefferson City', 'Montana': 'Helena', 'Nebraska': 'Lincoln', 'Nevada':'Carson City', 
 'New Hampshire': 'Concord', 'New Jersey': 'Trenton', 'Nowy Meksyk': 'Santa Fe', 'Nowy Jork': 'Albany',
- 'Karolina Północna': 'Raleigh',
-'Dakota Północna': 'Bismarck', 'Ohio': 'Columbus', 'Oklahoma': 'Oklahoma City',
+ 'Karolina Północna': 'Raleigh', 'Dakota Północna': 'Bismarck', 'Ohio': 'Columbus', 'Oklahoma': 'Oklahoma City',
 'Oregon': 'Salem', 'Pensylwania': 'Harrisburg', 'Rhode Island': 'Providence',
 'Karolina Południowa': 'Columbia', 'Dakota Południowa': 'Pierre', 'Tennessee':
 'Nashville', 'Teksas': 'Austin', 'Utah': 'Salt Lake City', 'Vermont':
@@ -24,18 +23,18 @@ capitals = {'Alabama': 'Montgomery', 'Alaska': 'Juneau', 'Arizona': 'Phoenix',
 
 for quizNum in range(35):
 
-    # TODO Utworzenie plików quizu i odpowiedzi na pytania 
+    #  Utworzenie plików quizu i odpowiedzi na pytania 
     quizFile = open('capitalsquiz%s.txt' % (quizNum +1), 'w')
     answerKeyFile = open('capitalsquiz_answers%s.txt' % (quizNum +1), 'w')
-    # TODO zapis nagłówka quizu
+    #  zapis nagłówka quizu
     quizFile.write('Imie i nazwisko:\n\nData:\n\nKlasa:\n\n')
     quizFile.write((' ' * 20) + 'Quiz stolic stanów (Quiz %s)' % (quizNum + 1))
     quizFile.write(('\n\n'))
-    # TODO losowe ustalenie kolejności stanów '
+    #  losowe ustalenie kolejności stanów '
     states = list(capitals.keys())
     random.shuffle(states)
 
-    # TODO iteracja przez 50 stanów i utworzenie pytania dotyczącego każdego z nich 
+    #  iteracja przez 50 stanów i utworzenie pytania dotyczącego każdego z nich 
     for questionNum in range(50):
         # Przygotowanie prawdłowych i nieprawidłowych odpowiedzi
         correctAnswer = capitals[states[questionNum]]
