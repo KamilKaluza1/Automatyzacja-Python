@@ -8,12 +8,16 @@ import shelve, pyperclip, sys
 
 mcbShelf = shelve.open('mcb')
 
-# TODO: Zapis zawartości schowka.
+#  Zapis zawartości schowka.
 if len(sys.argv) == 3 and sys.argv[1].lower() == 'save':
     mcbShelf[sys.argv[2]] = pyperclip.paste()
+elif len(sys.argv) == 3 and sys.argv[1].lower() == 'delete':
+    mcbShelf.remove(sys.argv[2])
 elif len(sys.argv) == 2:
     # Wyświetlenie listy słów kluczowych i wczytanie treści.
     if sys.argv[1].lower() == 'list':
         pyperclip.copy(mcbShelf[sys.argv[1]])
-        
+    elif sys.argv[1].lower() == 'delete':
+        del mcbShelf
+
 mcbShelf.close()
