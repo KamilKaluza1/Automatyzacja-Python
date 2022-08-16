@@ -26,6 +26,13 @@ for amerFilename in os.listdir('.'):
 
 
 
-# TODO: Przygotowanie nazwy pliku zawierającej datę w formacie europejskim.
-# TODO: Pobranie pełnych, bezwzględnych ścieżek dostępu do pliku.
-# TODO: Zmiana nazwy plików.
+# Przygotowanie nazwy pliku zawierającej datę w formacie europejskim.
+    euroFilename = beforePart + dayPart + '-' + monthPart + '-' + yerPart + afterPart
+# Pobranie pełnych, bezwzględnych ścieżek dostępu do pliku.
+    absWorkingDir = os.path.abspath('.')
+    amerFilename = os.path.join(absWorkingDir, amerFilename)
+    euroFilename = os.path.join(absWorkingDir, euroFilename)
+
+# Zmiana nazwy plików.
+    print('Rennaming "%s" to "%s"...' % (amerFilename, euroFilename))
+    #shutil.move(amerFilename, euroFilename)
