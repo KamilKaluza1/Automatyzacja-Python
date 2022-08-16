@@ -36,3 +36,10 @@ for amerFilename in os.listdir('.'):
 # Zmiana nazwy plików.
     print('Rennaming "%s" to "%s"...' % (amerFilename, euroFilename))
     #shutil.move(amerFilename, euroFilename)
+
+# (!) W celu dodania prefiksu na początku nazwy pliku, takiego jak spam_.
+# W takim przypadku nazwa pliku na przykład eggs.txt zostanie zmieniona
+# na spam_eggs.txt.
+# (!) W celu zmiany nazw plików zawierających daty w formacie europejskim
+# na datę w formacie amerykańskim.
+# (!) W celu usunięcia zer z nazw plików, takich jak spam0042.txt.
