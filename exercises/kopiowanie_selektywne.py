@@ -8,4 +8,4 @@ for folderName, subfolders, filenames in os.walk(katalog):
         if filename.endswith(".jpg"):
             path = folderName + "\\" + filename
             print(path)
-            shutil.move(path, znalezione)
+            shutil.copy(path, znalezione)
