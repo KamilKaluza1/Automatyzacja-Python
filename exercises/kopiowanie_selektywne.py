@@ -6,5 +6,6 @@ znalezione = 'C:\\Users\\48533\\OneDrive\\Pulpit\\Automatyzacja nudnych zadań p
 for folderName, subfolders, filenames in os.walk(katalog):
     for filename in filenames:
         if filename.endswith(".jpg"):
-            path = os.path.realpath(filename)
+            path = folderName + "\\" + filename
+            print(path)
             shutil.move(path, znalezione)
