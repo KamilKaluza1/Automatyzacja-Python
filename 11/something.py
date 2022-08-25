@@ -2,12 +2,16 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 
 browser = webdriver.Firefox()
-browser.get('https://inventwithpython.com/')
+browser.get('https://www.facebook.com/')
 
 
 
 try:
-    elem = browser.find_element(By.TAG_NAME, 'h1')
-    print('Znaleziono element  wraz z taką nazwą klasy!' )
+    password = browser.find_element(By.NAME, 'pass')
+    password.send_keys('not_realPassword')
+    email = browser.find_element(By.NAME, 'email')
+    email.send_keys('not_real@email.com')
+    password.submit()
+    print('Udana - nieudana próba logowania ' )
 except:
-    print('nie udało sie znaleść elementu wraz z podaną nazwą klasy')
+    print('błąd')
