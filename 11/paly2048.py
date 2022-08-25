@@ -5,7 +5,7 @@ from selenium.webdriver.common.by import By
 driver = webdriver.Firefox()
 driver.get('https://play2048.co/')
 htmlElem = driver.find_element(By.TAG_NAME, "html")
-score = driver.find_element(By.CLASS_NAME, "score-container")
+
 
 while True:
     htmlElem.send_keys(Keys.ARROW_UP)
