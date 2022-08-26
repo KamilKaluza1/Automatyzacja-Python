@@ -11,8 +11,7 @@ while True:
     htmlElem.send_keys(Keys.ARROW_UP)
     htmlElem.send_keys(Keys.ARROW_RIGHT)
     htmlElem.send_keys(Keys.ARROW_DOWN)
-    htmlElem.send_keys(Keys.ARROW_LEFT)
-    
+
     try:
         agine = driver.find_element(By.CLASS_NAME, "retry-button")
         agine.click()

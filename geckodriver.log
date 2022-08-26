@@ -746,3 +746,17 @@ TimedPromise@chrome://remote/content/marionette/sync.js:221:10
 interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
 webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
 JavaScript error: https://eus.rubiconproject.com/usync.js, line 4: SecurityError: Document.cookie getter: Forbidden in a sandboxed document without the 'allow-same-origin' flag.
+1661509310272	geckodriver	INFO	Listening on 127.0.0.1:50349
+1661509313365	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "50350" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\48533\\AppData\\Local\\Temp\\rust_mozprofileta5tGR"
+1661509313990	Marionette	INFO	Marionette enabled
+1661509313995	Marionette	INFO	Listening on port 50361
+WebDriver BiDi listening on ws://localhost:50350
+Read port: 50361
+1661509314234	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\48533\\AppData\\Local\\Temp\\rust_mozprofileta5tGR\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:50350/devtools/browser/fc2ed0fa-22c8-4649-af4b-a1bd64bc8487
+JavaScript error: https://play2048.co/detroitchicago/cmbv2.js?gcb=195-5&cb=04-3y02-8y06-13y07-2y19-7y0b-6y0d-21y13-4y17-5y1c-4y1d-1y20-2y1f-5y21-3y2f-4y5b-22y62-1&cmbcb=98&sj=x04x02x06x07x19x0bx0dx13x17x1cx1dx20x1fx21x2fx5bx62&abt=DynamicFloorMedInc, line 190: TypeError: a.body is null
+JavaScript warning: https://api.fouanalytics.com/s/pp.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1661509318946	Marionette	INFO	Stopped listening on port 50361
+JavaScript error: resource://gre/modules/UrlClassifierListManager.jsm, line 693: TypeError: this.tablesData[table] is undefined
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
