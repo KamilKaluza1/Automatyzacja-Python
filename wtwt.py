@@ -22,7 +22,7 @@ try: #4 spróbój wcisnąć przycisk retry, jak nie ma daj znać.
 except:
     print("nie ma")
 
-driver.forward() #5 przejdź karte do przodu tyłu odświerz zamknij 
+driver.forward() #5 przejdź karte do przodu 
 driver.back()  # tyłu
 driver.refresh() # odświerz
-driver.quit() #z amknij
+driver.quit() #zamknij
