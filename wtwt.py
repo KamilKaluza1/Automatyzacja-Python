@@ -3,6 +3,7 @@
 #2 przypisujesz przeglądarkę bierzesz strone
 #3 złap stronę i wciśnij strzałke w górę  
 #4 spróbój wcisnąć przycisk retry, jak nie ma daj znać.
+#5 przejdź karte do przodu tyłu odświerz zamknij 
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
@@ -15,9 +16,13 @@ htmlElem = driver.find_element(By.TAG_NAME, "html")
 # inne By ID|NAME|LINK_TEXT|TAG_NAME|CLASS_NAME|CSS_SELECTOR
 htmlElem.send_keys(Keys.ARROW_UP)
 # inne Keys END|ENTER|F4|HOME|ALT
-#4 spróbój wcisnąć przycisk retry, jak nie ma daj znać.
-try:
+try: #4 spróbój wcisnąć przycisk retry, jak nie ma daj znać.
     agine = driver.find_element(By.CLASS_NAME, "retry-button")
     agine.click()
 except:
     print("nie ma")
+
+driver.forward() #5 przejdź karte do przodu tyłu odświerz zamknij 
+driver.back()  # tyłu
+driver.refresh() # odświerz
+driver.quit() #z amknij
